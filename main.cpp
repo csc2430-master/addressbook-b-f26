@@ -10,7 +10,13 @@ int main() {
     std::cout << p.ToString() << std::endl;
     WriteFriendType(p);
 
-    Person q("John", 23, "2065551234", 2);
+    Person q("John", 23, "2065551234", 4);
+    std::cout << q.ToString() << std::endl;
+    q.Birthday();
+    std::cout << q.ToString() << std::endl;
+    WriteFriendType(q);
+
+    q = p;
     std::cout << q.ToString() << std::endl;
     q.Birthday();
     std::cout << q.ToString() << std::endl;
