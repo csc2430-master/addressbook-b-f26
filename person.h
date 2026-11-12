@@ -18,6 +18,7 @@ public:
     Person(const char* name, unsigned int age, const char* phone, unsigned int level);
     Person(const Person& p);
     ~Person();
+    Person& operator=(const Person& rhs);
     std::string ToString()const;
     void SetName(const char* name);
     const char* GetName()const;

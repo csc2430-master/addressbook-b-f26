@@ -29,6 +29,16 @@ Person::~Person() {
     delete[] _name;
 }
 
+Person & Person::operator=(const Person &rhs) {
+    delete[] _name;
+    _age = rhs._age;
+    _level = rhs._level;
+    _name = new char[strlen(rhs._name) + 1];
+    strcpy(_name, rhs._name);
+    strcpy(_phone, rhs._phone);
+
+}
+
 std::string Person::ToString() const {
     std::stringstream ss;
     ss << "Name: " << _name << " Age: " << _age << " Level: " << _level << " Phone: " << _phone;
