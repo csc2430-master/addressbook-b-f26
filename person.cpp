@@ -19,6 +19,10 @@ Person::Person(const char *name, unsigned int age, const char *phone, unsigned i
     strcpy(_phone, phone);
 }
 
+Person::~Person() {
+    delete[] _name;
+}
+
 std::string Person::ToString() const {
     std::stringstream ss;
     ss << "Name: " << _name << " Age: " << _age << " Level: " << _level << " Phone: " << _phone;
