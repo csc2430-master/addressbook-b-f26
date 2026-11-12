@@ -16,6 +16,7 @@ private:
 public:
     Person();
     Person(const char* name, unsigned int age, const char* phone, unsigned int level);
+    Person(const Person& p);
     ~Person();
     std::string ToString()const;
     void SetName(const char* name);

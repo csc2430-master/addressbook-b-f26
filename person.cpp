@@ -19,6 +19,12 @@ Person::Person(const char *name, unsigned int age, const char *phone, unsigned i
     strcpy(_phone, phone);
 }
 
+Person::Person(const Person &p): _age(p._age), _level(p._level) {
+    _name = new char[strlen(p._name) + 1];
+    strcpy(_name, p._name);
+    strcpy(_phone, p._phone);
+}
+
 Person::~Person() {
     delete[] _name;
 }
