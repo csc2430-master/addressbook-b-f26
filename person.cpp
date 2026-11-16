@@ -36,7 +36,7 @@ Person & Person::operator=(const Person &rhs) {
     _name = new char[strlen(rhs._name) + 1];
     strcpy(_name, rhs._name);
     strcpy(_phone, rhs._phone);
-
+    return *this;
 }
 
 std::string Person::ToString() const {
