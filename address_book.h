@@ -12,7 +12,7 @@
 class AddressBook {
 private:
     Person* _data[5];
-    size_t peopleCount;
+    size_t _peopleCount;
 public:
     AddressBook();
     ~AddressBook();
