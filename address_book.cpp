@@ -32,8 +32,8 @@ Person AddressBook::Find(const char *name) const {
 std::string AddressBook::ToString() const {
     std::stringstream ss;
     ss << "[";
-    for (size_t i=0; i<peopleCount; i++) {
-        if (i != peopleCount - 1) {
+    for (size_t i=0; i<_peopleCount; i++) {
+        if (i != _peopleCount - 1) {
             ss << _data[i]->ToString() << ",";
         }else {
             ss << _data[i]->ToString();
@@ -44,7 +44,7 @@ std::string AddressBook::ToString() const {
 }
 
 std::ostream & AddressBook::Write(std::ostream &output) const {
-    for (size_t i=0; i<peopleCount; i++)
+    for (size_t i=0; i<_peopleCount; i++)
         output << _data[i]->GetName() << " "
                 << _data[i]->GetAge() << " "
                 << _data[i]->GetPhone() << " "
