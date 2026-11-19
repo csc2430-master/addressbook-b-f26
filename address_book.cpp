@@ -7,10 +7,13 @@
 #include <sstream>
 
 AddressBook::AddressBook(): _peopleCount(0) {
-
+    for (size_t i=0; i<5; i++)
+        _data[i] = nullptr;
 }
 
 AddressBook::~AddressBook() {
+    for (size_t i=0; i<_peopleCount; i++)
+        delete _data[i];
 }
 
 bool AddressBook::AddPerson(const char *name, unsigned int age, const char *phone, unsigned int level) {
